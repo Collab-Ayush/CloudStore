@@ -62,7 +62,7 @@ CloudStore/
     ├── admin_dashboard.html
     ├── add_product.html
     └── edit_product.html
-
+```
 ## 14. AWS Architecture Diagram
 
 The following diagram illustrates the CloudStore deployment architecture.
@@ -78,14 +78,4 @@ flowchart TD
     D -->|"IAM Role Authorization"| F["Amazon S3 Private Bucket"]
     F -->|"Product Images"| G["Presigned URLs"]
     G --> A
-
-    subgraph AWS["AWS Cloud Infrastructure"]
-        subgraph EC2["EC2 - Ubuntu Server"]
-            B
-            C
-            D
-            E
-        end
-        F
-    end
 ```
