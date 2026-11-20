@@ -62,3 +62,30 @@ CloudStore/
     ├── admin_dashboard.html
     ├── add_product.html
     └── edit_product.html
+
+## 14. AWS Architecture Diagram
+
+The following diagram illustrates the CloudStore deployment architecture.
+
+```mermaid
+flowchart TD
+    A["User / Web Browser"] -->|"HTTP - Port 80"| B["Nginx Reverse Proxy"]
+    B --> C["Gunicorn WSGI Server"]
+    C --> D["Flask Application"]
+
+    D <-->|"Product and Admin Data"| E[("MySQL Database")]
+
+    D -->|"IAM Role Authorization"| F["Amazon S3 Private Bucket"]
+    F -->|"Product Images"| G["Presigned URLs"]
+    G --> A
+
+    subgraph AWS["AWS Cloud Infrastructure"]
+        subgraph EC2["EC2 - Ubuntu Server"]
+            B
+            C
+            D
+            E
+        end
+        F
+    end
+```
