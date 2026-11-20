@@ -79,3 +79,17 @@ flowchart TD
     F -->|"Product Images"| G["Presigned URLs"]
     G --> A
 ```
+
+## 15. Application Screenshots
+
+### Customer Portal
+![CloudStore Customer Portal](docs/screenshots/CloudStore_Screenshots/customer-portal.png)
+
+### Admin Login
+![Admin Login](docs/screenshots/CloudStore_Screenshots/admin-login-page.png)
+
+### Admin Dashboard
+![Admin Dashboard](docs/screenshots/CloudStore_Screenshots/admin-page.png)
+
+### Product Management
+![Product Management](docs/screenshots/CloudStore_Screenshots/prod-sec.png)
